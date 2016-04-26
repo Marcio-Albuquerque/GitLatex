@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.25)  25 APR 2016 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.25)  26 APR 2016 09:26
 entering extended mode
 **"./00 - PrimeiroRelatorioIC.tex"
 ("00 - PrimeiroRelatorioIC.tex"
@@ -1189,14 +1189,27 @@ l.6 	\imprimirfolhadelistadeilustracoes
 \openout2 = `02-DescricaoPerception.aux'.
 
 
-(02-DescricaoPerception.tex) [4
+(02-DescricaoPerception.tex
+<imagens/Figura1.jpg, id=56, 385.44pt x 134.75343pt>
+File: imagens/Figura1.jpg Graphic file (type jpg)
+ <use imagens/Figura1.jpg>
+Package pdftex.def Info: imagens/Figura1.jpg used on input line 8.
+(pdftex.def)             Requested size: 234.3013pt x 81.91365pt.
+) [4
 
 
 
-]
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.228 \include{02-DescricaoPerception}
+                                       <./imagens/Figura1.jpg>]
 \openout2 = `03-DescricaoProblemas.aux'.
 
- (03-DescricaoProblemas.tex) [5
+
+(03-DescricaoProblemas.tex) [5
 
 
 
@@ -1265,24 +1278,27 @@ ged.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 237.
  ) 
 Here is how much of TeX's memory you used:
- 12862 strings out of 493634
- 195735 string characters out of 3129933
- 450847 words of memory out of 3000000
- 15988 multiletter control sequences out of 15000+200000
- 26577 words of font info for 48 fonts, out of 3000000 for 9000
+ 12890 strings out of 493634
+ 196091 string characters out of 3129933
+ 450977 words of memory out of 3000000
+ 16005 multiletter control sequences out of 15000+200000
+ 26903 words of font info for 53 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 39i,12n,35p,306b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,12n,35p,555b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Marcio Albuquerque/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
 s/fontname/8r.enc}<C:/Users/Marcio Albuquerque/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Marcio Albuquerque/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Marcio 
-Albuquerque/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.p
-fb><C:/Users/Marcio Albuquerque/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
-rw/times/utmb8a.pfb><C:/Users/Marcio Albuquerque/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "00 - PrimeiroRelatorioIC.pdf" (10 pages, 151174 bytes).
+9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Marcio Albuquerque/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/
+Marcio Albuquerque/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr8.pfb><C:/Users/Marcio Albuquerque/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Marcio Albuquerque/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Marcio Albuquer
+que/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/User
+s/Marcio Albuquerque/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/ut
+mr8a.pfb>
+Output written on "00 - PrimeiroRelatorioIC.pdf" (10 pages, 189239 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 13910 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
+ 13915 words of extra memory for PDF output out of 14400 (max. 10000000)
 

@@ -4,7 +4,7 @@
 \select@language {brazil}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase { Descri\IeC {\c c}\IeC {\~a}o de uma rede neural tipo Perception}}{4}{chapter.1}
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase { Descri\IeC {\c c}\IeC {\~a}o de uma rede neural tipo Perceptron}}{4}{chapter.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Descri\IeC {\c c}\IeC {\~a}o do Problema}}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Equa\IeC {\c c}\IeC {\~o}es}{5}{section.2.1}
