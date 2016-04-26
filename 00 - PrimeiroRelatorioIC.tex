@@ -1,0 +1,237 @@
+
+%----------------------------     Trabalho De IC    --------------------------------------------------%
+
+%----------------------------    Inico da classe Abntex      --------------------------------------------------%
+\documentclass[
+	% -- opções da classe do PDF --
+	%article,			% indica que é um artigo acadêmico (Altera as numeração)
+	%openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	12pt,				% tamanho da fonte
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	chapter=Title,		% títulos de capítulos convertidos em letras maiúsculas
+	section=Title,		% títulos de seções convertidos em letras maiúsculas
+	subsection=Title,	% títulos de subseções convertidos em letras maiúsculas
+	subsubsection=TITLE, % títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	%brazil,				% o último idioma é o principal do documento
+	oneside, 			% retira uma página que cria depois da capa,para impressão em verso e anverso.
+	%twoside,			% para impressão em verso e anverso. Oposto a oneside
+	%sumario=tradicional % deixa o sumario em forma de cascata.
+	]{abntex2}
+
+%**********************************************************************************************%
+%---------------------------- PACOTES: pacotes fundamentais  ----------------------------------%
+
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{nomencl} 			% Lista de simbolos
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{times}				% pacotes que é similar Time new Roman
+\usepackage{multicol} 			%Ativar multiplas colunas
+\usepackage{scalefnt} 			%Ativar escala da fonte
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{float}
+\usepackage{makeidx}  			%Pacotes de indices 
+		
+%**********************************************************************************************%
+%--------   Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2  --------%
+
+\usepackage{lipsum}				% para geração de dummy text
+
+%**********************************************************************************************%
+
+
+%-----------------------------    PACOTES: de citações  ---------------------------------------%
+
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	                 % Citações padrão ABNT
+
+
+%**********************************************************************************************%
+%-------------------------   Configurações do pacote backref  ---------------------------------% 
+%-------------------   Usado sem a opção hyperpageref de backref  -----------------------------%
+
+
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+%**********************************************************************************************%
+%-------------------------   Renomear as REFERÊNCIAS  ---------------------------------% 
+ 
+
+%---------------- Informações de dados para CAPA , FOLHA DE ROSTO e BANCA EXAMINADORA  --------% 
+
+\titulo{TRABALHO N$ ^0$ 1 - Rede Neural Perception}
+\autor{ANTONIO MÁRCIO ALBUQUERQUE ALMEIDA - 347924 \\[0.5 cm] JOÃO RAFAEL BARBOSA DE ARAÚJO}
+\local{SOBRAL}
+\data{2016}
+\instituicao{%
+	UNIVERSIDADE FEDERAL DO CEARÁ
+	\par
+	ENGENHARIA DA COMPUTAÇÃO
+	\par
+	INTELIGÊNCIA COMPUTACIONAL
+	\par
+	MÁRCIO AMORA}	
+\tipotrabalho{Relátorio}
+
+
+%---------------- Configuração da capa  ----------------------------------------------% 
+
+\renewcommand{\imprimircapa}{ %Código altera o padão
+	\begin{capa}%
+		\center
+		
+		\begin{center}
+			\includegraphics[scale=0.9]{Imagens/00-Brasao-UFC.pdf}
+		\end{center}	
+
+	    {\ABNTEXchapterfont\bfseries{\imprimirinstituicao\vspace*{3.5cm}}}
+	    
+	    {\ABNTEXchapterfont\bfseries\imprimirautor\vspace*{3.5cm}}
+	    
+	    {\ABNTEXchapterfont\bfseries\imprimirtitulo}
+	    \vspace*{\fill}
+	    
+	    {\bfseries\imprimirlocal}
+	    \par
+	    {\bfseries\imprimirdata}
+	    
+	    \vspace*{1cm}
+
+	\end{capa}
+}
+
+
+
+
+
+\newcommand{\imprimirfolhadelistadeilustracoes}{
+		
+	% Inserir lista de ilustrações
+	
+	\pdfbookmark[0]{\listfigurename}{lof}
+	\listoffigures*
+	\cleardoublepage
+}
+
+\newcommand{\imprimirfolhadelistadetabelas}{
+
+	% Inserir lista de tabelas
+
+	\pdfbookmark[0]{\listtablename}{lot}
+	\listoftables*
+	\cleardoublepage
+}
+
+
+\newcommand{\imprimirfolhadosumario}{
+		
+	% Inserir o sumário
+	
+	\newpage	
+	\pdfbookmark[0]{\contentsname}{toc}
+	\tableofcontents*
+	\cleardoublepage
+	
+}
+
+
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+%\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{ pdfstartview={FitH},
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Modelo de artigo científico com abnTeX2},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{atigo científico}, 
+		%colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+%\counterwithin{figure}{section} %Muda a legenda par 1.1.1
+%\counterwithin{table}{section}
+%\counterwithin{equation}{section}
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{3cm}{3cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+\checkandfixthelayout
+% --
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Espaçamento simples
+\SingleSpacing
+
+% ----
+% Início do documento%
+
+\begin{document}
+
+%Não Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+%Arquivo onde tem as chamadas das folhas inicias, Capa , contra-capa, sumário, lista de tabela, lista de fígura, etc
+\include{00-Configuracao-das-folhas-inicias}
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+\include{01-Intruducao}
+\include{02-DescricaoPerception}
+\include{03-DescricaoProblemas}
+\include{04-MATLAB}
+\include{05-Resultado}
+\include{06-Conclusao}
+
+
+\bibliography{00-Bibliografia}
+
+\end{document}
